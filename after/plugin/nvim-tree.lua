@@ -1,6 +1,6 @@
 require("nvim-tree").setup({
-		vim.keymap.set("n", "<C-n>", vim.cmd.NvimTreeToggle),
-		vim.keymap.set("n", "<C-o>", vim.cmd.NvimTreeFocus),
+		vim.keymap.set("n", "<C-o>", vim.cmd.NvimTreeToggle),
+		vim.keymap.set("n", "<C-p>", vim.cmd.NvimTreeFocus),
   sort = {
     sorter = "case_sensitive",
   },
