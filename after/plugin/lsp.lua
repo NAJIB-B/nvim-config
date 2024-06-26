@@ -1,6 +1,7 @@
 local lsp_zero = require('lsp-zero')
 
 
+
 -- here you can setup the language servers
 require('lspconfig').tsserver.setup({
 		root_dir =	require'lspconfig'.util.root_pattern("package.json", "tsconfig.json", ".git"),
@@ -38,6 +39,8 @@ require('mason-lspconfig').setup({
 
   },
 })
+
+
 local cmp = require('cmp')
 
 cmp.setup({
@@ -45,7 +48,6 @@ cmp.setup({
     {name = 'nvim_lsp'},
   },
   mapping = {
-		['<CR>'] = cmp.mapping.confirm({select = false}),
     ['<C-y>'] = cmp.mapping.confirm({select = false}),
     ['<C-e>'] = cmp.mapping.abort(),
     ['<Up>'] = cmp.mapping.select_prev_item({behavior = 'select'}),
@@ -53,13 +55,6 @@ cmp.setup({
     ['<C-p>'] = cmp.mapping(function()
       if cmp.visible() then
         cmp.select_prev_item({behavior = 'insert'})
-      else
-        cmp.complete()
-      end
-    end),
-    ['<C-n>'] = cmp.mapping(function()
-      if cmp.visible() then
-        cmp.select_next_item({behavior = 'insert'})
       else
         cmp.complete()
       end

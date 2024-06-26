@@ -15,3 +15,15 @@ vim.opt.incsearch = true
 
 vim.opt.updatetime = 50
 
+-- Function to set tab width
+local function set_tab_width()
+  vim.bo.shiftwidth = 2
+  vim.bo.tabstop = 2
+  vim.bo.expandtab = true
+end
+
+-- Autocommand to apply the settings for JavaScript files
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "javascript",
+  callback = set_tab_width,
+})

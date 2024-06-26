@@ -1,4 +1,5 @@
 -- This file can be loaded by calling `lua require('plugins')` from your init.vim
+--
 
 -- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
@@ -28,14 +29,8 @@ return require('packer').startup(function(use)
 	use('nvim-tree/nvim-web-devicons')	
 	use("nvim-lualine/lualine.nvim")
 
-	use {
-        'nvim-tree/nvim-tree.lua',
-        lazy = true,
-        requires = {
-				{'nvim-tree/nvim-web-devicons'},
-        },
-    }
 	use("windwp/nvim-autopairs")
+
 	use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
 	  use({
     "stevearc/oil.nvim",
@@ -45,6 +40,13 @@ return require('packer').startup(function(use)
   })
   use("Pocco81/auto-save.nvim")
   use("akinsho/toggleterm.nvim")
+  	use {
+        'nvim-tree/nvim-tree.lua',
+        lazy = true,
+        requires = {
+				{'nvim-tree/nvim-web-devicons'},
+        },
+    }
 
   use {
         'VonHeikemen/lsp-zero.nvim',
@@ -68,4 +70,6 @@ return require('packer').startup(function(use)
             {'rafamadriz/friendly-snippets'}, -- Optional
         },
     }
+
+	
 end)
