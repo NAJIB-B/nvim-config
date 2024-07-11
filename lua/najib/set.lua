@@ -27,3 +27,15 @@ vim.api.nvim_create_autocmd("FileType", {
   pattern = "javascript",
   callback = set_tab_width,
 })
+
+-- setting persistent undo 
+-- Check if the undo directory exists, if not, create it
+local undodir = vim.fn.stdpath('config') .. '/undo'
+if not vim.fn.isdirectory(undodir) then
+    vim.fn.mkdir(undodir, 'p')
+end
+
+-- Set the undo directory and enable persistent undo
+vim.opt.undodir = undodir
+vim.opt.undofile = true
+

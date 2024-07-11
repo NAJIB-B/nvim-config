@@ -26,7 +26,7 @@ return require('packer').startup(function(use)
 	use('ThePrimeagen/harpoon')
 	use('mbbill/undotree')
 	use('tpope/vim-fugitive')
-	use('nvim-tree/nvim-web-devicons')	
+	use('nvim-tree/nvim-web-devicons')
 	use("nvim-lualine/lualine.nvim")
 
 	use("windwp/nvim-autopairs")
@@ -39,6 +39,7 @@ return require('packer').startup(function(use)
     end,
   })
   use("Pocco81/auto-save.nvim")
+  use("jose-elias-alvarez/null-ls.nvim")
   use("akinsho/toggleterm.nvim")
   	use {
         'nvim-tree/nvim-tree.lua',
@@ -68,8 +69,16 @@ return require('packer').startup(function(use)
             -- Snippets
             {'L3MON4D3/LuaSnip'},             -- Required
             {'rafamadriz/friendly-snippets'}, -- Optional
+            {'mlaursen/vim-react-snippets'}, -- react snippet
+
         },
     }
 
-	
+	use {
+  "pmizio/typescript-tools.nvim",
+  requires = { "nvim-lua/plenary.nvim"},
+   config = function()
+    require("typescript-tools").setup {}
+  end,
+}
 end)

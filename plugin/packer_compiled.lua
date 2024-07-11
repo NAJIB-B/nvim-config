@@ -144,6 +144,11 @@ _G.packer_plugins = {
     path = "/home/najib/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  ["null-ls.nvim"] = {
+    loaded = true,
+    path = "/home/najib/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
+    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
+  },
   ["nvim-autopairs"] = {
     loaded = true,
     path = "/home/najib/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
@@ -211,6 +216,12 @@ _G.packer_plugins = {
     path = "/home/najib/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
   },
+  ["typescript-tools.nvim"] = {
+    config = { "\27LJ\2\nB\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\21typescript-tools\frequire\0" },
+    loaded = true,
+    path = "/home/najib/.local/share/nvim/site/pack/packer/start/typescript-tools.nvim",
+    url = "https://github.com/pmizio/typescript-tools.nvim"
+  },
   undotree = {
     loaded = true,
     path = "/home/najib/.local/share/nvim/site/pack/packer/start/undotree",
@@ -220,10 +231,19 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/najib/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
+  },
+  ["vim-react-snippets"] = {
+    loaded = true,
+    path = "/home/najib/.local/share/nvim/site/pack/packer/start/vim-react-snippets",
+    url = "https://github.com/mlaursen/vim-react-snippets"
   }
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: typescript-tools.nvim
+time([[Config for typescript-tools.nvim]], true)
+try_loadstring("\27LJ\2\nB\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\21typescript-tools\frequire\0", "config", "typescript-tools.nvim")
+time([[Config for typescript-tools.nvim]], false)
 -- Config for: oil.nvim
 time([[Config for oil.nvim]], true)
 try_loadstring("\27LJ\2\n1\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\boil\frequire\0", "config", "oil.nvim")
