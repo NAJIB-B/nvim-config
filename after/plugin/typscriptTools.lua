@@ -20,7 +20,6 @@ require("typescript-tools").setup {
     tsserver_max_memory = "auto",
     -- described below
     tsserver_format_options = {},
-    tsserver_file_preferences = {},
     -- locale of all tsserver messages, supported locales you can find here:
     -- https://github.com/microsoft/TypeScript/blob/3c221fc086be52b19801f6e8d82596d04607ede6/src/compiler/utilitiesPublic.ts#L620
     tsserver_locale = "en",
@@ -40,6 +39,9 @@ require("typescript-tools").setup {
     jsx_close_tag = {
         enable = false,
         filetypes = { "javascriptreact", "typescriptreact" },
-    }
+    },
+	 tsserver_file_preferences = {
+			 disableSuggestions = true,
+    },
   },
 }
