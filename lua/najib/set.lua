@@ -39,3 +39,7 @@ end
 vim.opt.undodir = undodir
 vim.opt.undofile = true
 
+
+-- set clipboard copying
+vim.opt.clipboard:append('unnamedplus')
+

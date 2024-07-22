@@ -29,3 +29,7 @@ vim.keymap.set("n", "<leader>bd", vim.cmd.bdelete)
 vim.keymap.set("n", "<leader>w", vim.cmd.vsp)
 vim.keymap.set("n", "<leader>nn", "<C-w><C-w>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>c", vim.cmd.close)
+
+--for debuggers
+vim.keymap.set("n", "<leader>db", "<cmd>DapToggleBreakpoint<CR>")
+vim.keymap.set("n", "<leader>dr", "<cmd>DapContinue<CR>")

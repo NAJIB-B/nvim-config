@@ -14,7 +14,7 @@ lsp_zero.set_sign_icons({
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  ensure_installed = {'cssls', 'lua_ls', 'html', 'eslint'},
+  ensure_installed = {'cssls', 'lua_ls', 'html'},
   handlers = {
     function(lua_ls)
       require('lspconfig')[lua_ls].setup({})

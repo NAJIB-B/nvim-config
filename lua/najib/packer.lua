@@ -41,6 +41,7 @@ return require('packer').startup(function(use)
   use("Pocco81/auto-save.nvim")
   use("jose-elias-alvarez/null-ls.nvim")
   use("akinsho/toggleterm.nvim")
+  use("mfussenegger/nvim-dap")
   	use {
         'nvim-tree/nvim-tree.lua',
         lazy = true,
@@ -48,6 +49,11 @@ return require('packer').startup(function(use)
 				{'nvim-tree/nvim-web-devicons'},
         },
     }
+	use("nvim-neotest/nvim-nio")
+use	{ "rcarriga/nvim-dap-ui",
+
+	}
+
 
   use {
         'VonHeikemen/lsp-zero.nvim',
