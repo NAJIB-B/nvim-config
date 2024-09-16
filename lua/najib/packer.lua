@@ -42,13 +42,8 @@ return require('packer').startup(function(use)
   use("jose-elias-alvarez/null-ls.nvim")
   use("akinsho/toggleterm.nvim")
   use("mfussenegger/nvim-dap")
-  	use {
-        'nvim-tree/nvim-tree.lua',
-        lazy = true,
-        requires = {
-				{'nvim-tree/nvim-web-devicons'},
-        },
-    }
+  use("tpope/vim-surround")
+    
 	use("nvim-neotest/nvim-nio")
 use	{ "rcarriga/nvim-dap-ui",
 
