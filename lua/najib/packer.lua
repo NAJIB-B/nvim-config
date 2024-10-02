@@ -39,6 +39,7 @@ return require('packer').startup(function(use)
     end,
   })
   use("Pocco81/auto-save.nvim")
+  use( "BurntSushi/ripgrep" )
   use("jose-elias-alvarez/null-ls.nvim")
   use("akinsho/toggleterm.nvim")
   use("mfussenegger/nvim-dap")
